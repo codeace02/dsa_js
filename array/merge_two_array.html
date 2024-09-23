@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge array</title>
+
+    <script>
+
+        let arr1 = [9, 23, 56, 78];
+        let arr2 = [12, 23, 59, 87, 90];
+
+        let mergedArray = [];
+
+        for (let i = 0; i < arr1.length; i++) {
+            mergedArray[i] = arr1[i];
+        }
+
+        for (let i = 0; i < arr2.length; i++) {
+            mergedArray[arr1.length + i] = arr2[i]
+        }
+
+        console.log("Merged array : ", mergedArray)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
