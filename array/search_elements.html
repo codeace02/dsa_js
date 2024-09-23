@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search element</title>
+
+    <script>
+
+        // linear search algorithm
+
+        let data = [9, 23, 56, 78, 12, 23, 59, 87, 90, 'alice'];
+        // let item = 78;
+        let index = undefined;
+
+        // for (let i = 0; i < data.length; i++) {
+        //     if (data[i] == item) {
+        //         index = i;
+        //         break;
+        //     }
+        // }
+
+        function handleSearch() {
+            let element = document.getElementById('search').value;
+
+            for (let i = 0; i < data.length; i++) {
+                if (data[i] == element) {
+                    index = i;
+                    break;
+                } else {
+                    index = null;
+                }
+            }
+            index ? console.log(`Element ${element} is present at ${index} position`) : console.log("Element not found")
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <input autocomplete="off" type="text" id="search" placeholder="Enter element">
+    <button onclick="handleSearch()">Search</button>
+</body>
+
+</html>
