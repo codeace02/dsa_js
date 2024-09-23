@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete element</title>
+
+    <script>
+        let data = [9, 23, 56, 78, 12, 23, 59, 87, 90];
+
+        // let position = 1;
+
+        // for (let i = position; i < data.length; i++) {
+        //     data[i] = data[i + 1]
+        // }
+
+        function handleDelete() {
+
+            let position = document.getElementById('position').value;
+
+            for (let i = Number(position); i < data.length; i++) {
+                data[i] = data[i + 1]
+            }
+
+            data.length = data.length - 1;
+            console.log('data', data);
+        }
+    </script>
+</head>
+
+<body>
+    <input autocomplete="off" type="text" id="position" placeholder="Enter position">
+    <button onclick="handleDelete()">Insert</button>
+</body>
+
+</html>
