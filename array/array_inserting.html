@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting elements in Array</title>
+
+    <script>
+        let data = [9, 23, 56, 78, 12, 23, 59, 87, 90];
+        // let newElement = 151;
+        // let position = 2;
+        console.log('data lenth before', data.length);
+
+        // reverse loop=>
+
+        // for (let i = data.length - 1; i >= 0; i--) {
+        //     if (i >= position) {
+        //         data[i + 1] = data[i]
+        //         if (i === position) {
+        //             data[i] = newElement
+        //         }
+        //     }
+        // }
+
+        function handleInsert() {
+
+            let position = document.getElementById('position').value;
+            let element = Number(document.getElementById('element').value);
+
+            for (let i = (data.length - 1); i >= 0; i--) {
+                if (i >= position) {
+                    data[i + 1] = data[i]
+                    if (i == position) {
+                        data[i] = element
+                    }
+                }
+            }
+            console.warn('data after inserting element =>', data);
+        }
+    </script>
+</head>
+
+<body>
+    <input autocomplete="off" type="text" id="position" placeholder="Enter position">
+    <input autocomplete="off" type="text" id="element" placeholder="Enter new element">
+    <button onclick="handleInsert()">Insert</button>
+</body>
+
+</html>
