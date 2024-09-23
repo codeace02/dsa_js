@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Accessing</title>
+
+    <script>
+        let data = [9, 23, 56, 78, 12, 23, 59, 87, 90, 0, 'm', 'ak', 121, 158];
+
+        data.map((item, id) => {
+            return document.write(`Element at ${id} : ${item} <br/> `)
+        })
+
+        function handleElement() {
+            let n = document.getElementById("element").value;
+            if (n < data.length && parseInt(n) === Number) {
+                alert(`Element at ${n} position is : ${data[n]} `)
+            } else if (parseInt(n) !== Number) {
+                alert("Invalid input")
+            } else {
+                alert("Length exceeds")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input autocomplete="off" type="text" id="element">
+    <button onclick="handleElement()">Get Element</button>
+</body>
+
+</html>
