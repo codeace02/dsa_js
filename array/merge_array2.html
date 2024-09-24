@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merging arrays via while loop</title>
+
+    <script>
+
+        // this method will work only for sorted arrays
+
+        let arr1 = [9, 23, 56, 78, 87, 90];
+        let arr2 = [12, 25, 59];
+
+        let mergedArray = [];
+
+        let a1 = 0;
+        let a2 = 0;
+        let a3 = 0;
+
+        while (a1 < arr1.length && a2 < arr2.length) {
+            if (arr1[a1] < arr2[a2]) {
+                mergedArray[a3] = arr1[a1];
+                a1++;
+            } else {
+                mergedArray[a3] = arr2[a2];
+                a2++;
+            }
+            a3++;
+        }
+
+        while (a1 < arr1.length) {
+            mergedArray[a3] = arr1[a1];
+            a1++;
+            a3++;
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
